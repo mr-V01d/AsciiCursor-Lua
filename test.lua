@@ -1,6 +1,3 @@
-require("init")
+require("mr-void.cursor")
 
--- Cursor.scroll(-10)
---
-
---print(Cursor.csi("test"))
+Cursor.srg.style.set_style(Cursor.srg.style.BOLD)

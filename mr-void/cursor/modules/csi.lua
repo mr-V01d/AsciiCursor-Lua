@@ -9,14 +9,14 @@ local csi = {
 	ERASE_LINE_CHAR = "K",
 	SCROLL_UP_CHAR = "S",
 	SCROLL_DOWN_CHAR = "T",
-	SGR_CHAR = "m",
+	SRG_CHAR = "m",
 }
 
 setmetatable(csi, {
 	__call = function(self, ...)
 		local cmd = ...
 		assert(type(cmd) == "string")
-		io.write(self.CSI_CHAR)
+		io.write(self.CSI_CHAR .. cmd)
 	end,
 })
 

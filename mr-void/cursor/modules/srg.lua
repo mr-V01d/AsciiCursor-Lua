@@ -1,6 +1,10 @@
-local csi = require("csi")
+local csi = require("mr-void.cursor.modules.csi")
 
-local srg = {
+local srg = {}
+
+--#region Srg Style
+
+srg.style = {
 	NORMAL = 0,
 	BOLD = 1,
 	FAINT = 2,
@@ -18,10 +22,22 @@ local srg = {
 	NOT_STRIKE = 29,
 }
 
-function srg.set_style(mode)
+function srg.style.set_style(mode)
 	mode = mode or 0
 	assert(type(mode) == "number")
-	csi(mode .. csi.SGR_CHAR)
+	csi(mode .. csi.SRG_CHAR)
 end
+
+--#endregion
+
+--#region Srg Color
+-- srg.color =
+-- {
+--
+-- }
+-- function srg.set_color()
+--
+-- end
+--#endregion
 
 return srg
