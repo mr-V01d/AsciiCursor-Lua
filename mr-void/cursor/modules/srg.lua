@@ -31,13 +31,25 @@ end
 --#endregion
 
 --#region Srg Color
--- srg.color =
--- {
---
--- }
--- function srg.set_color()
---
--- end
+srg.color = {
+	SET_FOREGROUND_COLOR_RGB = "38;2;",
+	SET_BACKGROUND_COLOR_RGB = "48;2;",
+}
+
+function srg.set_background_rgb(r, g, b)
+	assert(type(r) == "number" and r >= 0 and r <= 255)
+	assert(type(g) == "number" and g >= 0 and g <= 255)
+	assert(type(b) == "number" and b >= 0 and b <= 255)
+	csi(srg.color.SET_BACKGROUND_COLOR_RGB .. r .. ";" .. g .. ";" .. b .. csi.SRG_CHAR)
+end
+
+function srg.set_foreground_rgb(r, g, b)
+	assert(type(r) == "number" and r >= 0 and r <= 255)
+	assert(type(g) == "number" and g >= 0 and g <= 255)
+	assert(type(b) == "number" and b >= 0 and b <= 255)
+	csi(srg.color.SET_FOREGROUND_COLOR_RGB .. r .. ";" .. g .. ";" .. b .. csi.SRG_CHAR)
+end
+
 --#endregion
 
 return srg
