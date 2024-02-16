@@ -11,6 +11,12 @@ You can install AsciiCursor-Lua by simply copying the `cursor.lua` file into you
 require 'cursor'
 ```
 
+or via luarocks:
+
+```bash
+$ luarocks install asciicursor-lua
+```
+
 ## Usage
 
 Here are some basic functions provided by AsciiCursor-Lua:
