@@ -4,7 +4,7 @@ AsciiCursor-Lua is a lightweight Lua library for manipulating the terminal curso
 
 ## Installation
 
-You can install AsciiCursor-Lua by simply copying the `cursor.lua` file into your project and importing it as shown below:
+You can install AsciiCursor-Lua by simply copying the `cursor` folder into your project and importing it as shown below:
 
 ```lua
 -- Import AsciiCursor module
